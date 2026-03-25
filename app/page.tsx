@@ -255,9 +255,9 @@ export default function Home() {
             </div>
             <div className="space-y-3 text-sm">
               <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
-                <p className="font-extrabold">Delivery schedule: 0 / 1 / 2</p>
+                <p className="font-extrabold">Delivery schedule</p>
                 <p className="mt-1 text-[var(--wm-gray)]">
-                  All options are fulfilled same day.
+                  Deliveries are fulfilled same day.
                 </p>
               </div>
               <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
