@@ -30,19 +30,21 @@ const howItWorks = [
 const scheduleOptions = [
   {
     code: "Schedule 0",
-    time: "ASAP same-day",
-    detail: "Urgent same-day pickup and delivery based on current rider availability.",
+    time: "OTC",
+    detail:
+      "No prescription needed. Usually available in supermarkets and pharmacies.",
   },
   {
     code: "Schedule 1",
-    time: "Standard same-day",
-    detail: "Same-day delivery with a confirmed daytime collection and drop-off window.",
+    time: "OTC at pharmacy",
+    detail:
+      "No doctor script required, but sold through pharmacies with pharmacist guidance.",
   },
   {
     code: "Schedule 2",
-    time: "Flexible same-day",
+    time: "OTC at pharmacy",
     detail:
-      "Still delivered today, with a later route window when timing is less urgent.",
+      "No doctor script required, but supply and advice are managed by a pharmacist.",
   },
 ];
 
@@ -174,8 +176,6 @@ function PhoneIcon() {
 export default function Home() {
   return (
     <div className="relative overflow-x-clip bg-[var(--wm-surface)] text-[var(--wm-dark)]">
-      <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,rgba(30,55,73,0.035),rgba(30,55,73,0.035)_1px,transparent_1px,transparent_48px)]" />
-
       <a
         href={whatsappLink}
         target="_blank"
@@ -187,7 +187,7 @@ export default function Home() {
         Order via WhatsApp
       </a>
 
-      <main className="relative mx-auto flex w-full max-w-6xl flex-col px-5 pb-20 pt-6 sm:px-8 lg:px-12">
+      <main className="relative mx-auto flex w-full max-w-[1380px] flex-col px-5 pb-20 pt-6 sm:px-8 lg:px-12 xl:px-16">
         <header className="mb-10 flex items-center justify-between border-b-2 border-[var(--wm-dark)] pb-4">
           <div className="flex items-center gap-3">
             <Image
@@ -212,7 +212,7 @@ export default function Home() {
           </a>
         </header>
 
-        <section className="grid gap-8 border-x-2 border-y-2 border-[var(--wm-dark)] bg-white px-6 py-10 sm:px-10 sm:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <section className="grid gap-8 border-x-2 border-y-2 border-[var(--wm-dark)] bg-white px-6 py-10 sm:px-10 sm:py-14 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
             <p className="mb-4 inline-flex w-fit border border-[var(--wm-dark)] bg-[var(--wm-muted)] px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-[var(--wm-dark)]">
               Same-day courier | Carletonville
@@ -312,7 +312,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-10 grid gap-5 lg:grid-cols-3">
+        <section className="mt-10 border-2 border-[var(--wm-dark)] bg-white p-5 sm:p-7">
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+            <h2 className="font-[var(--font-heading)] text-3xl font-bold uppercase text-[var(--wm-dark)] sm:text-4xl">
+              Medication schedules explained
+            </h2>
+            <p className="text-sm font-bold uppercase tracking-wide text-[var(--wm-green)]">
+              We dont sell, we deliver !
+            </p>
+          </div>
+          <p className="mb-6 max-w-4xl text-[var(--wm-gray)]">
+            Schedule 0, 1 and 2 refer to medicine categories, not delivery
+            priority. Your delivery is still arranged same-day once collection is
+            confirmed.
+          </p>
+
+          <div className="grid gap-5 lg:grid-cols-3">
           {scheduleOptions.map((option) => (
             <article
               key={option.code}
@@ -332,6 +347,34 @@ export default function Home() {
               <p className="mt-2 text-[var(--wm-gray)]">{option.detail}</p>
             </article>
           ))}
+          </div>
+
+          <div className="mt-5 grid gap-5 xl:grid-cols-2">
+            <article className="border-2 border-[rgba(69,162,145,0.55)] bg-[var(--wm-muted)] p-5">
+              <h3 className="text-2xl font-[var(--font-heading)] font-bold uppercase text-[var(--wm-dark)]">
+                Schedule 3 to 6
+              </h3>
+              <p className="mt-2 text-[var(--wm-gray)]">
+                Prescription required. These medicines must be dispensed by a
+                pharmacist with a valid doctor&apos;s written prescription.
+              </p>
+            </article>
+            <article className="border-2 border-[rgba(30,55,73,0.4)] bg-white p-5">
+              <h3 className="text-2xl font-[var(--font-heading)] font-bold uppercase text-[var(--wm-dark)]">
+                Emergency access note
+              </h3>
+              <p className="mt-2 text-[var(--wm-gray)]">
+                In strict emergencies, a pharmacist may provide a limited supply
+                without a prescription when therapy was already initiated by an
+                authorized prescriber.
+              </p>
+            </article>
+          </div>
+
+          <p className="mt-4 text-sm text-[var(--wm-gray)]">
+            Note: medicine regulations and delivery rules can change. Dispensing
+            decisions remain with registered pharmacies.
+          </p>
         </section>
 
         <section className="mt-10 grid gap-5 lg:grid-cols-2">

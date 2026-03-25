@@ -5,7 +5,7 @@
   --wm-green: #54ac46;
   --wm-turquoise: #45a291;
   --wm-gray: #919a9f;
-  --wm-surface: #f3f8fa;
+  --wm-surface: #ffffff;
   --wm-muted: #e9f2f1;
   --background: var(--wm-surface);
   --foreground: var(--wm-dark);
