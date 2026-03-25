@@ -187,8 +187,8 @@ export default function Home() {
         Order via WhatsApp
       </a>
 
-      <main className="relative mx-auto flex w-full max-w-[1380px] flex-col px-5 pb-20 pt-6 sm:px-8 lg:px-12 xl:px-16">
-        <header className="mb-10 flex items-center justify-between border-b-2 border-[var(--wm-dark)] pb-4">
+      <main className="relative mx-auto flex w-full max-w-[1380px] flex-col px-5 pb-20 pt-4 sm:px-8 lg:px-12 xl:px-16">
+        <header className="mb-8 flex items-center justify-between border-b-2 border-[var(--wm-dark)] pb-2">
           <div className="flex items-center gap-3">
             <Image
               src="/wemovelogo.png"
@@ -349,7 +349,7 @@ export default function Home() {
           ))}
           </div>
 
-          <div className="mt-5 grid gap-5 xl:grid-cols-2">
+          <div className="mt-5">
             <article className="border-2 border-[rgba(69,162,145,0.55)] bg-[var(--wm-muted)] p-5">
               <h3 className="text-2xl font-[var(--font-heading)] font-bold uppercase text-[var(--wm-dark)]">
                 Schedule 3 to 6
@@ -357,16 +357,6 @@ export default function Home() {
               <p className="mt-2 text-[var(--wm-gray)]">
                 Prescription required. These medicines must be dispensed by a
                 pharmacist with a valid doctor&apos;s written prescription.
-              </p>
-            </article>
-            <article className="border-2 border-[rgba(30,55,73,0.4)] bg-white p-5">
-              <h3 className="text-2xl font-[var(--font-heading)] font-bold uppercase text-[var(--wm-dark)]">
-                Emergency access note
-              </h3>
-              <p className="mt-2 text-[var(--wm-gray)]">
-                In strict emergencies, a pharmacist may provide a limited supply
-                without a prescription when therapy was already initiated by an
-                authorized prescriber.
               </p>
             </article>
           </div>
