@@ -48,7 +48,7 @@ const scheduleOptions = [
 
 function IconBubble({ children }: { children: React.ReactNode }) {
   return (
-    <span className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--wm-turquoise)] text-white">
+    <span className="mb-4 inline-flex h-11 w-11 items-center justify-center border border-[var(--wm-dark)] bg-[var(--wm-turquoise)] text-white">
       {children}
     </span>
   );
@@ -173,22 +173,22 @@ function PhoneIcon() {
 
 export default function Home() {
   return (
-    <div className="relative overflow-x-clip bg-[var(--wm-surface)] text-[var(--wm-ink)]">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(69,162,145,0.14),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(84,172,70,0.16),transparent_38%)]" />
+    <div className="relative overflow-x-clip bg-[var(--wm-surface)] text-[var(--wm-dark)]">
+      <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,rgba(30,55,73,0.035),rgba(30,55,73,0.035)_1px,transparent_1px,transparent_48px)]" />
 
       <a
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Message WemooveMed on WhatsApp"
-        className="fixed bottom-5 right-5 z-50 flex min-h-11 items-center gap-2 rounded-full bg-[var(--wm-green)] px-4 py-3 text-sm font-bold text-white shadow-[0_18px_35px_rgba(84,172,70,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--wm-dark)]"
+        className="fixed bottom-5 right-5 z-50 flex min-h-11 items-center gap-2 border-2 border-[var(--wm-dark)] bg-[var(--wm-green)] px-4 py-3 text-sm font-extrabold text-white shadow-[6px_6px_0px_rgba(30,55,73,0.85)] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--wm-dark)]"
       >
         <WhatsAppGlyph className="h-5 w-5" />
-        Order on WhatsApp
+        Order via WhatsApp
       </a>
 
       <main className="relative mx-auto flex w-full max-w-6xl flex-col px-5 pb-20 pt-6 sm:px-8 lg:px-12">
-        <header className="mb-10 flex items-center justify-between rounded-2xl border border-[rgba(30,55,73,0.1)] bg-white/80 px-4 py-3 backdrop-blur-sm sm:px-6">
+        <header className="mb-10 flex items-center justify-between border-b-2 border-[var(--wm-dark)] pb-4">
           <div className="flex items-center gap-3">
             <Image
               src="/wemovelogo.png"
@@ -197,33 +197,33 @@ export default function Home() {
               height={42}
               priority
             />
-            <span className="hidden rounded-full bg-[var(--wm-muted)] px-3 py-1 text-xs font-semibold text-[var(--wm-dark)] sm:inline-flex">
+            <span className="hidden border border-[var(--wm-dark)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--wm-dark)] sm:inline-flex">
               Carletonville only
             </span>
           </div>
           <a
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[var(--wm-dark)] px-5 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#284c65] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--wm-green)]"
+            className="inline-flex min-h-11 items-center justify-center gap-2 border-2 border-[var(--wm-dark)] bg-white px-5 py-2 text-sm font-extrabold uppercase tracking-wide text-[var(--wm-dark)] transition-colors duration-200 hover:bg-[var(--wm-muted)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--wm-green)]"
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
           >
             <WhatsAppGlyph />
-            Chat on WhatsApp
+            Chat now
           </a>
         </header>
 
-        <section className="grid gap-8 rounded-[2rem] bg-gradient-to-br from-[var(--wm-dark)] to-[#274a64] px-6 py-10 text-white sm:px-10 sm:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <section className="grid gap-8 border-x-2 border-y-2 border-[var(--wm-dark)] bg-white px-6 py-10 sm:px-10 sm:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div>
-            <p className="mb-4 inline-flex w-fit items-center rounded-full bg-white/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em]">
-              Same-day courier in Carletonville
+            <p className="mb-4 inline-flex w-fit border border-[var(--wm-dark)] bg-[var(--wm-muted)] px-3 py-1 text-xs font-extrabold uppercase tracking-[0.12em] text-[var(--wm-dark)]">
+              Same-day courier | Carletonville
             </p>
-            <h1 className="max-w-2xl font-[var(--font-heading)] text-4xl font-extrabold leading-tight sm:text-5xl">
-              Prescription collection and delivery made simple.
+            <h1 className="max-w-2xl font-[var(--font-heading)] text-5xl font-bold uppercase leading-[0.95] text-[var(--wm-dark)] sm:text-6xl">
+              Need meds collected today?
             </h1>
-            <p className="mt-5 max-w-xl text-lg text-[#d5dee4]">
-              WemooveMed does not create prescriptions. We collect existing
-              prescriptions and deliver medication the same day, with updates
-              through WhatsApp.
+            <p className="mt-5 max-w-xl text-lg text-[var(--wm-dark)]/80">
+              Send us a WhatsApp and we handle the courier side from there.
+              Quick chats, clear updates, same-day delivery. We collect existing
+              prescriptions, we do not issue new ones.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -231,41 +231,41 @@ export default function Home() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[var(--wm-green)] px-6 py-3 text-base font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="inline-flex min-h-11 items-center justify-center gap-2 border-2 border-[var(--wm-dark)] bg-[var(--wm-green)] px-6 py-3 text-base font-extrabold uppercase tracking-wide text-white transition-all duration-200 hover:-translate-y-0.5 hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--wm-dark)]"
               >
                 <WhatsAppGlyph className="h-5 w-5" />
-                Place Order on WhatsApp
+                Place order on WhatsApp
               </a>
               <a
                 href="#how-it-works"
-                className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/35 px-6 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/10"
+                className="inline-flex min-h-11 items-center justify-center border-2 border-[var(--wm-dark)] bg-white px-6 py-3 text-base font-extrabold uppercase tracking-wide text-[var(--wm-dark)] transition-colors duration-200 hover:bg-[var(--wm-muted)]"
               >
-                See How It Works
+                How it works
               </a>
             </div>
           </div>
 
-          <div className="rounded-3xl bg-white/10 p-5 ring-1 ring-white/20 backdrop-blur-sm">
+          <div className="border-2 border-[var(--wm-dark)] bg-[var(--wm-dark)] p-5 text-white">
             <div className="mb-4 flex items-center justify-between text-sm text-[#d8e4eb]">
               <span>Live service details</span>
               <span className="inline-flex items-center gap-1 text-[var(--wm-green)]">
-                <span className="h-2 w-2 rounded-full bg-[var(--wm-green)]" />
+                <span className="h-2 w-2 bg-[var(--wm-green)]" />
                 Online now
               </span>
             </div>
             <div className="space-y-3 text-sm">
-              <div className="rounded-xl bg-white/90 p-3 text-[var(--wm-dark)]">
-                <p className="font-semibold">Delivery schedule: 0 / 1 / 2</p>
+              <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
+                <p className="font-extrabold">Delivery schedule: 0 / 1 / 2</p>
                 <p className="mt-1 text-[var(--wm-gray)]">
                   All options are fulfilled same day.
                 </p>
               </div>
-              <div className="rounded-xl bg-white/90 p-3 text-[var(--wm-dark)]">
-                <p className="font-semibold">Service area</p>
+              <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
+                <p className="font-extrabold">Service area</p>
                 <p className="mt-1 text-[var(--wm-gray)]">Carletonville only</p>
               </div>
-              <div className="rounded-xl bg-white/90 p-3 text-[var(--wm-dark)]">
-                <p className="font-semibold">Prescription policy</p>
+              <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
+                <p className="font-extrabold">Prescription policy</p>
                 <p className="mt-1 text-[var(--wm-gray)]">
                   We collect prescriptions. We do not issue prescriptions.
                 </p>
@@ -276,21 +276,20 @@ export default function Home() {
 
         <section
           id="how-it-works"
-          className="mt-14 rounded-3xl border border-[rgba(30,55,73,0.12)] bg-white p-6 sm:p-8"
+          className="mt-14 border-2 border-[rgba(30,55,73,0.35)] bg-white p-6 sm:p-8"
         >
-          <h2 className="font-[var(--font-heading)] text-3xl font-extrabold text-[var(--wm-dark)] sm:text-4xl">
+          <h2 className="font-[var(--font-heading)] text-4xl font-bold uppercase text-[var(--wm-dark)] sm:text-5xl">
             How it works
           </h2>
           <p className="mt-3 max-w-2xl text-base text-[var(--wm-gray)] sm:text-lg">
-            One clear flow from request to delivery, with your WhatsApp chat as
-            the command center.
+            Super simple: message us, confirm details, then our rider gets it done.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {howItWorks.map((step, index) => (
               <article
                 key={step.title}
-                className="rounded-2xl bg-[var(--wm-muted)] p-5 transition-transform duration-200 hover:-translate-y-1"
+                className="border border-[var(--wm-dark)] bg-[var(--wm-muted)] p-5 transition-transform duration-200 hover:-translate-y-1"
               >
                 <IconBubble>
                   {step.icon === "message-circle" ? (
@@ -301,10 +300,10 @@ export default function Home() {
                     <TruckIcon />
                   )}
                 </IconBubble>
-                <p className="mb-1 text-sm font-bold text-[var(--wm-green)]">
+                <p className="mb-1 text-sm font-extrabold uppercase text-[var(--wm-green)]">
                   Step {index + 1}
                 </p>
-                <h3 className="text-xl font-bold text-[var(--wm-dark)]">
+                <h3 className="text-xl font-extrabold text-[var(--wm-dark)]">
                   {step.title}
                 </h3>
                 <p className="mt-2 text-[var(--wm-gray)]">{step.description}</p>
@@ -317,17 +316,17 @@ export default function Home() {
           {scheduleOptions.map((option) => (
             <article
               key={option.code}
-              className="rounded-2xl border border-[rgba(69,162,145,0.26)] bg-white p-5"
+              className="border-2 border-[rgba(69,162,145,0.55)] bg-white p-5"
             >
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-bold text-[var(--wm-dark)]">
+                <h3 className="text-2xl font-[var(--font-heading)] font-bold uppercase text-[var(--wm-dark)]">
                   {option.code}
                 </h3>
                 <span className="text-[var(--wm-turquoise)]">
                   <RouteIcon />
                 </span>
               </div>
-              <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-[var(--wm-green)]">
+              <p className="mt-2 text-sm font-extrabold uppercase tracking-wide text-[var(--wm-green)]">
                 {option.time}
               </p>
               <p className="mt-2 text-[var(--wm-gray)]">{option.detail}</p>
@@ -336,43 +335,43 @@ export default function Home() {
         </section>
 
         <section className="mt-10 grid gap-5 lg:grid-cols-2">
-          <article className="rounded-3xl bg-[var(--wm-muted)] p-6">
-            <h3 className="font-[var(--font-heading)] text-2xl font-extrabold text-[var(--wm-dark)]">
-              Service area right now
+          <article className="border-2 border-[var(--wm-dark)] bg-[var(--wm-muted)] p-6">
+            <h3 className="font-[var(--font-heading)] text-3xl font-bold uppercase text-[var(--wm-dark)]">
+              Where we deliver
             </h3>
             <p className="mt-3 text-[var(--wm-gray)]">
-              We currently serve <strong>Carletonville</strong> only. Keeping our
-              focus local helps us deliver faster and communicate clearly.
+              Right now, we only serve <strong>Carletonville</strong>. Keeping it
+              local helps us stay fast and keep communication tight.
             </p>
             <p className="mt-3 text-sm text-[var(--wm-gray)]">
-              Expansion areas can be added later as operations grow.
+              We will add more areas as we grow.
             </p>
           </article>
 
-          <article className="rounded-3xl bg-white p-6 shadow-[0_16px_40px_rgba(30,55,73,0.1)]">
-            <h3 className="font-[var(--font-heading)] text-2xl font-extrabold text-[var(--wm-dark)]">
-              Important policy
+          <article className="border-2 border-[var(--wm-dark)] bg-white p-6">
+            <h3 className="font-[var(--font-heading)] text-3xl font-bold uppercase text-[var(--wm-dark)]">
+              Quick policy note
             </h3>
             <p className="mt-3 text-[var(--wm-gray)]">
-              We do <strong>not</strong> create or issue prescriptions. Our role
-              is courier logistics: collecting valid prescriptions and delivering
-              medication according to your instructions.
+              We do <strong>not</strong> create or issue prescriptions. We handle
+              courier logistics only: collect valid scripts and deliver medication
+              based on your instructions.
             </p>
           </article>
         </section>
 
-        <section className="mt-12 rounded-3xl bg-[linear-gradient(120deg,#54ac46,#45a291)] p-7 text-white sm:p-10">
-          <h2 className="font-[var(--font-heading)] text-3xl font-extrabold sm:text-4xl">
-            Ready to place your same-day order?
+        <section className="mt-12 border-2 border-[var(--wm-dark)] bg-[var(--wm-dark)] p-7 text-white sm:p-10">
+          <h2 className="font-[var(--font-heading)] text-4xl font-bold uppercase sm:text-5xl">
+            Ready to send your order?
           </h2>
           <p className="mt-3 max-w-2xl text-lg text-white/90">
-            Tap WhatsApp, send your details, and we will take it from there.
+            Hit WhatsApp, send your details, and we handle the rest today.
           </p>
           <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-base font-extrabold text-[var(--wm-dark)] transition-transform duration-200 hover:-translate-y-0.5"
+            className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 border-2 border-white bg-[var(--wm-green)] px-6 py-3 text-base font-extrabold uppercase tracking-wide text-white transition-transform duration-200 hover:-translate-y-0.5"
           >
             <WhatsAppGlyph className="h-5 w-5" />
             Start WhatsApp Conversation

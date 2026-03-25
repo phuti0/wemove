@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Manrope, Source_Sans_3 } from "next/font/google";
+import { Barlow_Condensed, Nunito } from "next/font/google";
 import "./globals.css";
 
-const headingFont = Manrope({
+const headingFont = Barlow_Condensed({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["600", "700"],
 });
 
-const bodyFont = Source_Sans_3({
+const bodyFont = Nunito({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
