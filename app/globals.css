@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --wm-dark: #1e3749;
+  --wm-green: #54ac46;
+  --wm-turquoise: #45a291;
+  --wm-gray: #919a9f;
+  --wm-surface: #f3f8fa;
+  --wm-muted: #e9f2f1;
+  --background: var(--wm-surface);
+  --foreground: var(--wm-dark);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-body);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+@keyframes scooter-slide {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+.wm-scooter {
+  animation: scooter-slide 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
