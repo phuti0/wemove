@@ -191,7 +191,7 @@ export default function Home() {
         <header className="mb-8 flex items-center justify-between border-b-2 border-[var(--wm-dark)] pb-2">
           <div className="flex items-center gap-3">
             <Image
-              src="/wemovelogo.png"
+              src="/wemovelogog.png"
               alt="Wemoovemed logo"
               width={154}
               height={42}
