@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const WHATSAPP_NUMBER = "27603846470";
 const whatsappMessage = encodeURIComponent(
-  "Hi WemooveMed, I need same-day prescription collection and delivery in Carletonville."
+  "Hi Wemoovemed, I need same-day prescription collection and delivery in Carletonville."
 );
 const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
@@ -180,7 +180,7 @@ export default function Home() {
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Message WemooveMed on WhatsApp"
+        aria-label="Message Wemoovemed on WhatsApp"
         className="fixed bottom-5 right-5 z-50 flex min-h-11 items-center gap-2 border-2 border-[var(--wm-dark)] bg-[var(--wm-green)] px-4 py-3 text-sm font-extrabold text-white shadow-[6px_6px_0px_rgba(30,55,73,0.85)] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--wm-dark)]"
       >
         <WhatsAppGlyph className="h-5 w-5" />
@@ -192,7 +192,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Image
               src="/wemovelogo.png"
-              alt="WemooveMed logo"
+              alt="Wemoovemed logo"
               width={154}
               height={42}
               priority
@@ -413,7 +413,7 @@ export default function Home() {
 
         <footer className="mt-12 border-t border-[rgba(145,154,159,0.3)] py-8 text-sm text-[var(--wm-gray)]">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p>WemooveMed Courier Services</p>
+            <p>Wemoovemed Courier Services</p>
             <p className="inline-flex items-center gap-2">
               <PhoneIcon />
               +27 60 384 6470

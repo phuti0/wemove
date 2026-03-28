@@ -24,7 +24,7 @@ export default function Loading() {
         </svg>
       </div>
       <p className="mt-28 text-sm font-semibold tracking-wide text-[var(--wm-dark)]">
-        Loading WemooveMed...
+        Loading Wemoovemed...
       </p>
     </div>
   );
