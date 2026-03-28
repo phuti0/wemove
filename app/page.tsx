@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const WHATSAPP_NUMBER = "27603846470";
+const WHATSAPP_NUMBER = "27684720563";
 const whatsappMessage = encodeURIComponent(
   "Hi Wemoovemed, I need same-day prescription collection and delivery in Carletonville."
 );
