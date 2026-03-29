@@ -17,7 +17,7 @@ const bodyFont = Nunito({
 export const metadata: Metadata = {
   title: "Wemoovemed | Same-Day Prescription Collection & Delivery",
   description:
-    "Wemoovemed is a same-day courier service in Carletonville. Message us on WhatsApp to arrange prescription collection and delivery.",
+    "Wemoovemed is a medicine same-day courier service in Carletonville. Message us on WhatsApp to arrange prescription collection and delivery.",
 };
 
 export default function RootLayout({
