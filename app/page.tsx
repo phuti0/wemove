@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const WHATSAPP_NUMBER = "27684720563";
+const WHATSAPP_NUMBER = "27603846470";
 const whatsappMessage = encodeURIComponent(
   "Hi Wemoovemed, I need same-day prescription collection and delivery in Carletonville."
 );
@@ -210,14 +210,14 @@ export default function Home() {
         Order via WhatsApp
       </a>
 
-      <main className="relative mx-auto flex w-full max-w-[1380px] flex-col px-5 pb-20 pt-4 sm:px-8 lg:px-12 xl:px-16">
-        <header className="mb-8 flex items-center justify-between border-b-2 border-[var(--wm-dark)] pb-2">
-          <div className="flex items-center gap-3">
+      <main className="relative mx-auto flex w-full max-w-[1380px] flex-col px-3 pb-20  sm:px-8 lg:px-12 xl:px-16">
+        <header className="mb-2 flex items-center justify-between border-b-2 border-[var(--wm-dark)] pb-1">
+          <div className="flex items-center gap-2">
             <Image
               src="/wemovelogog.png"
               alt="Wemoovemed logo"
               width={154}
-              height={42}
+              height={32}
               priority
             />
             <span className="hidden border border-[var(--wm-dark)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--wm-dark)] sm:inline-flex">
@@ -268,31 +268,80 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border-2 border-[var(--wm-dark)] bg-[var(--wm-dark)] p-5 text-white">
-            <div className="mb-4 flex items-center justify-between text-sm text-[#d8e4eb]">
-              <span>Live service details</span>
-              <span className="inline-flex items-center gap-1 text-[var(--wm-green)]">
-                <span className="h-2 w-2 bg-[var(--wm-green)]" />
-                Online now
-              </span>
+          <div className="grid gap-4">
+            <figure className="relative min-h-[320px] overflow-hidden border-2 border-[var(--wm-dark)] sm:min-h-[400px]">
+              <Image
+                src="/p4.jpg"
+                alt="Courier rider with scooter and parcel ready for delivery"
+                fill
+                priority
+                sizes="(min-width: 1024px) 34vw, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(30,55,73,0.75)] via-transparent to-transparent" />
+              <figcaption className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                <p className="text-xs font-extrabold uppercase tracking-[0.1em] text-[var(--wm-green)]">
+                  Real local riders
+                </p>
+                <p className="mt-1 text-base font-bold">
+                  Human support, and consistent WhatsApp updates.
+                </p>
+              </figcaption>
+            </figure>
+
+            <div className="border-2 border-[var(--wm-dark)] bg-[var(--wm-dark)] p-4 text-white">
+              <div className="mb-3 flex items-center justify-between text-sm text-[#d8e4eb]">
+                <span>Live service details</span>
+                <span className="inline-flex items-center gap-1 text-[var(--wm-green)]">
+                  <span className="h-2 w-2 bg-[var(--wm-green)]" />
+                  Online now
+                </span>
+              </div>
+              <div className="grid gap-3 text-sm sm:grid-cols-3 lg:grid-cols-1">
+                <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
+                  <p className="font-extrabold">Delivery schedule</p>
+                  <p className="mt-1 text-[var(--wm-gray)]">
+                    Deliveries are fulfilled same day.
+                  </p>
+                </div>
+                <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
+                  <p className="font-extrabold">Service area</p>
+                  <p className="mt-1 text-[var(--wm-gray)]">Carletonville only</p>
+                </div>
+                <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
+                  <p className="font-extrabold">Prescription policy</p>
+                  <p className="mt-1 text-[var(--wm-gray)]">
+                    We collect prescriptions. We do not issue prescriptions.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="space-y-3 text-sm">
-              <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
-                <p className="font-extrabold">Delivery schedule</p>
-                <p className="mt-1 text-[var(--wm-gray)]">
-                  Deliveries are fulfilled same day.
-                </p>
-              </div>
-              <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
-                <p className="font-extrabold">Service area</p>
-                <p className="mt-1 text-[var(--wm-gray)]">Carletonville only</p>
-              </div>
-              <div className="border border-white/25 bg-white/95 p-3 text-[var(--wm-dark)]">
-                <p className="font-extrabold">Prescription policy</p>
-                <p className="mt-1 text-[var(--wm-gray)]">
-                  We collect prescriptions. We do not issue prescriptions.
-                </p>
-              </div>
+          </div>
+        </section>
+
+        <section className="mt-10 border-2 border-[var(--wm-dark)] bg-white p-5 sm:p-6">
+          <div className="grid gap-5 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <figure className="relative min-h-[260px] overflow-hidden border-2 border-[var(--wm-dark)] sm:min-h-[320px]">
+              <Image
+                src="/p2.jpg"
+                alt="Courier showing approval while handing over delivered packages"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </figure>
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-[0.1em] text-[var(--wm-green)]">
+                Local and reliable
+              </p>
+              <h2 className="mt-2 font-[var(--font-heading)] text-4xl font-bold uppercase text-[var(--wm-dark)] sm:text-5xl">
+                More than a drop-off
+              </h2>
+              <p className="mt-3 max-w-2xl text-base text-[var(--wm-gray)] sm:text-lg">
+                You chat with a real person, get clear updates, and know exactly
+                when your parcel is collected and delivered. That is the
+                Wemoovemed difference.
+              </p>
             </div>
           </div>
         </section>
@@ -398,6 +447,25 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-wide text-[var(--wm-green)]">
               We dont sell, we deliver !
             </p>
+          </div>
+
+          <div className="mb-6 grid gap-4 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <p className="max-w-2xl text-[var(--wm-gray)]">
+              Straightforward local rates, confirmed instantly on WhatsApp. No
+              hidden steps, no complex forms.
+            </p>
+            <figure className="relative min-h-[210px] overflow-hidden border-2 border-[var(--wm-dark)]">
+              <Image
+                src="/p3.jpg"
+                alt="Courier carrying packages for neighborhood delivery"
+                fill
+                sizes="(min-width: 1024px) 35vw, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-[rgba(30,55,73,0.72)] px-3 py-2 text-xs font-bold uppercase tracking-wide text-white">
+                Real service. Real delivery. Same day.
+              </div>
+            </figure>
           </div>
 
           <div className="grid gap-4 lg:grid-cols-2">
