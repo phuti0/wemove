@@ -48,6 +48,29 @@ const scheduleOptions = [
   },
 ];
 
+const pricingTiers = [
+  {
+    area: "5km radius (Town)",
+    price: "R35",
+    service: "Delivery only",
+  },
+  {
+    area: "5km radius (Town)",
+    price: "R55",
+    service: "Collection of medical aid/prescription",
+  },
+  {
+    area: "Anywhere in Carletonville",
+    price: "R55",
+    service: "Delivery only",
+  },
+  {
+    area: "Anywhere in Carletonville",
+    price: "R75",
+    service: "Collection & delivery",
+  },
+];
+
 function IconBubble({ children }: { children: React.ReactNode }) {
   return (
     <span className="mb-4 inline-flex h-11 w-11 items-center justify-center border border-[var(--wm-dark)] bg-[var(--wm-turquoise)] text-white">
@@ -365,6 +388,51 @@ export default function Home() {
             Note: medicine regulations and delivery rules can change. Dispensing
             decisions remain with registered pharmacies.
           </p>
+        </section>
+
+        <section className="mt-10 border-2 border-[var(--wm-dark)] bg-white p-5 sm:p-7">
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+            <h2 className="font-[var(--font-heading)] text-3xl font-bold uppercase text-[var(--wm-dark)] sm:text-4xl">
+              Pricing
+            </h2>
+            <p className="text-sm font-bold uppercase tracking-wide text-[var(--wm-green)]">
+              We dont sell, we deliver !
+            </p>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-2">
+            {pricingTiers.map((tier) => (
+              <article
+                key={`${tier.area}-${tier.price}-${tier.service}`}
+                className="border-2 border-[rgba(30,55,73,0.35)] bg-[var(--wm-muted)] p-5"
+              >
+                <p className="text-xs font-extrabold uppercase tracking-wide text-[var(--wm-gray)]">
+                  {tier.area}
+                </p>
+                <p className="mt-2 font-[var(--font-heading)] text-4xl font-bold text-[var(--wm-dark)]">
+                  {tier.price}
+                </p>
+                <p className="mt-2 text-base font-bold text-[var(--wm-dark)]">
+                  {tier.service}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <p className="mt-4 text-sm text-[var(--wm-gray)]">
+            Final pricing is confirmed on WhatsApp based on pickup and drop-off
+            details.
+          </p>
+
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 border-2 border-[var(--wm-dark)] bg-[var(--wm-green)] px-6 py-3 text-base font-extrabold uppercase tracking-wide text-white transition-transform duration-200 hover:-translate-y-0.5"
+          >
+            <WhatsAppGlyph className="h-5 w-5" />
+            Order on WhatsApp
+          </a>
         </section>
 
         <section className="mt-10 grid gap-5 lg:grid-cols-2">
