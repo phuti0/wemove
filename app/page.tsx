@@ -552,7 +552,7 @@ export default function Home() {
             <p>Wemoovemed Courier Services</p>
             <p className="inline-flex items-center gap-2">
               <PhoneIcon />
-              +27 60 384 6470
+              +27 68 472 0563
             </p>
           </div>
         </footer>
